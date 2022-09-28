@@ -1,5 +1,6 @@
 import * as helper from "../../../common/helper.js";
 import { STATS_BONUS } from "../../../common/constants.js";
+//import { FORBIDDEN_STATS } from "../../../src/constants.js";
 
 export function getPlayerStats() {
   const stats: PlayerStats = {
@@ -22,9 +23,51 @@ export function getPlayerStats() {
     farming_fortune: { base: 0 },
     foraging_fortune: { base: 0 },
     pristine: { base: 0 },
+    fishing_speed: { base: 0 },
+    health_regen: { base: 100 },
+    vitality: { base: 100 },
+    mending: { base: 100 },
+    combat_wisdom: { base: 0 },
+    mining_wisdom: { base: 0 },
+    farming_wisdom: { base: 0 },
+    foraging_wisdom: { base: 0 },
+    fishing_wisdom: { base: 0 },
+    enchanting_wisdom: { base: 0 },
+    alchemy_wisdom: { base: 0 },
+    carpentry_wisdom: { base: 0 },
+    runecrafting_wisdom: { base: 0 },
+    social_wisdom: { base: 0 },
   };
 
   const allowedStats = Object.keys(stats);
+
+  // Bestiary Level 
+  if (calculated.bestiary.bonus) {
+    stats['health'].bestiary ??= 0;
+    stats['health'].bestiary += calculated.bestiary.bonus;
+  }
+
+  // Unique Pets
+  if (calculated.pet_score_bonus.magic_find > 0) {
+    stats['magic_find'].pet_score ??= 0;
+    stats['magic_find'].pet_score += calculated.pet_score_bonus.magic_find;
+  }
+
+  // Jacob's Farming Shop
+  if (calculated.farming?.perks?.double_drops > 0) {
+    stats['farming_fortune'].jacob_double_drops ??= 0;
+    stats['farming_fortune'].jacob_double_drops += calculated.farming.perks.double_drops * 2;
+  }
+
+  // Permanent stats from Wither Essence Shop 
+  /*if (Object.keys(calculated.perks).length > 0) {
+    for (const [name, perkData] of Object.entries(calculated.perks)) {
+      if (name.startsWith('permanent_')) {
+        stats[name.replaceAll('permanent_', '')].essence_shop_perk ??= 0;
+        stats[name.replaceAll('permanent_', '')].essence_shop_perk += perkData * FORBIDDEN_STATS[name.replaceAll('permanent_', '')];
+      }
+    }
+  }*/
 
   // Active armor stats
   for (const piece of items.armor) {
@@ -147,6 +190,7 @@ export function getPlayerStats() {
     }
   }
 
+  // Century Cakes
   if (calculated.century_cakes) {
     for (const century_cake of calculated.century_cakes) {
       if (!allowedStats.includes(century_cake.stat)) {
@@ -162,6 +206,8 @@ export function getPlayerStats() {
   if (calculated.reaper_peppers_eaten > 0) {
     stats.health.reaper_peppers = calculated.reaper_peppers_eaten;
   }
+
+  console.log(stats);
 
   return stats;
 }
