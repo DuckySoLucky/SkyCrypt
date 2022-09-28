@@ -190,6 +190,7 @@ export const STATS_DATA = {
     suffix: "",
     color: "b",
   },
+<<<<<<< HEAD
   breaking_power: {
     name: "Breaking Power",
     nameLore: "Breaking Power",
@@ -199,6 +200,8 @@ export const STATS_DATA = {
     suffix: "",
     color: "2",
   },
+=======
+>>>>>>> ee8491cba6ee2dbe64ad3f6b0c999c3d231d0af2
   health_regen: {
     name: "Health Regen",
     nameLore: "Health Regen",
@@ -316,6 +319,7 @@ export const STATS_DATA = {
     suffix: "",
     color: "3",
   },
+<<<<<<< HEAD
   // todo: remove this once #1639 is merged and update wisdom values
   wisdom: {
     name: "Wisdom",
@@ -326,6 +330,8 @@ export const STATS_DATA = {
     suffix: "",
     color: "3",
   },
+=======
+>>>>>>> ee8491cba6ee2dbe64ad3f6b0c999c3d231d0af2
 };
 
 const symbols = {

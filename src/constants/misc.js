@@ -89,8 +89,13 @@ export const STAT_TEMPLATE = {
   damage: 0,
   damage_increase: 0,
   fishing_speed: 0,
+<<<<<<< HEAD
   health_regen: 100,
   vitality: 100,
+=======
+  health_regen: 0,
+  vitality: 0,
+>>>>>>> ee8491cba6ee2dbe64ad3f6b0c999c3d231d0af2
   mending: 100,
   combat_wisdom: 0,
   mining_wisdom: 0,
