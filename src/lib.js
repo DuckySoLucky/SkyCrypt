@@ -2059,7 +2059,7 @@ export async function getStats(
 
   // TROPHY FISH
   output.trophyFish = getTrophyFish(userProfile);
-  
+
   // MISC
 
   const misc = {};
