@@ -2550,6 +2550,10 @@ export async function getPets(profile, userProfile) {
     if (pet.skin && constants.PET_SKINS?.[`PET_SKIN_${pet.skin}`]) {
       pet.texture_path = constants.PET_SKINS[`PET_SKIN_${pet.skin}`].texture;
       petSkin = constants.PET_SKINS[`PET_SKIN_${pet.skin}`].name;
+
+      if (pet.texture_path.startsWith("https://")) {
+        pet.texture_link = true;
+      }
     }
 
     // Get first row of lore

@@ -869,23 +869,23 @@ export const ITEM_ANIMATIONS = [
   {
     id: "PET_SKIN_TIGER_TWILIGHT",
     texture: "/resources/img/items/pet_skin_tiger_twilight.png",
-    animation: {
+    /*animation: {
       day: "/head/896211dc599368dbd9056c0116ab61063991db793be93066a858eb4e9ce56438",
       night: "/head/25afc37dc1909ee0a3eb8d0404271fc47660cff1153495412d6e9896632eaa8e",
-    },
+    },*/
   },
   {
     id: "PET_SKIN_ELEPHANT_MONOCHROME",
     texture: "/resources/img/items/pet_skin_elephant_monochrome.png",
-    animation: {
+    /*animation: {
       day: "/head/4bdf0f628c05e86cabdee2f5858dd5def7f8b8d940cbf25f9937e2ffb53432f4",
       night: "/head/176e8db6cd2db2fd11747c750d24040f3435b3301d91949f33f9615d16dab060",
-    },
+    },*/
   },
   {
     id: "PET_SKIN_MONKEY_GORILLA",
     texture: "/resources/img/items/pet_skin_monkey_gorilla.png",
-    animation: {
+    /*animation: {
       0: "/head/ac75d405235a58c68bddadad082e895e84feadfffd9f69c00a2194498732d48",
       1000: "/head/2a8be837b3361464b5ca555029658f0fdc9432cb351f088996f6da7210e1fc75",
       1200: "/head/75c6a5d6361a7b847fa6bbf6905c381f764a84f1c820d8e82c76e7db0feb9ee7",
@@ -895,12 +895,12 @@ export const ITEM_ANIMATIONS = [
       3800: "/head/75c6a5d6361a7b847fa6bbf6905c381f764a84f1c820d8e82c76e7db0feb9ee7",
       4100: "/head/2a8be837b3361464b5ca555029658f0fdc9432cb351f088996f6da7210e1fc75",
       4300: "/head/ac75d405235a58c68bddadad082e895e84feadfffd9f69c00a2194498732d48",
-    },
+    },*/
   },
   {
     id: "PET_SKIN_ENDERMITE_RADIANT",
     texture: "/resources/img/items/pet_skin_endermite_radiant.png",
-    animation: {
+    /*animation: {
       0: "/head/3840ad985c0b08811ab0a137ca736119d079dbf2143462145eb62b6ecbd2d7cc",
       250: "/head/7019bf6fa4602458a9b20ad09cca45ef5ccc6257081ae323f9bbfca0cbc947e9",
       400: "/head/b2e7419ad458452240b03d8e32016218c70a694a97b9973f4d8ba974056248bd",
@@ -931,12 +931,12 @@ export const ITEM_ANIMATIONS = [
       5700: "/head/adb8259926a17a493a85669387f6e3d77876dac3c838b6c7d6f919ebc53217a5",
       5850: "/head/4d671df85ea9ee52885d7d774f0c9462c8e8bf048e77aa06160c1cc5f45273be",
       6000: "/head/b8705a24c728644bfec2195f315e5d354060638e2bd9bf8df73d84146c8d1406",
-    },
+    },*/
   },
   {
     id: "PET_SKIN_SQUID_GLOW",
     texture: "/resources/img/items/pet_skin_squid_glow.png",
-    animation: {
+    /*animation: {
       0: "/head/162eba7072c3054e310daf2e6970cc65a4346a9c4118399f4d68a2d7e66612b7",
       50: "/head/f2ff4c824c39727c6bb8a126379a5ded2ba9aed24b59879f6b3af461e44df84a",
       290: "/head/a1309033f08a444dea956d0d8099e5d132b14509617ee00ce0c4687879900546",
@@ -948,24 +948,24 @@ export const ITEM_ANIMATIONS = [
       2040: "/head/fca9982520eee4066bab0ae697f3b3656084b6639ba89113bd8e23ab7288563d",
       2300: "/head/727581cfcf9905729b336dcf13784eac227bcdd709c4e92e018d45c4896ae29b",
       2550: "/head/e0f95d0e5c64f46851b3c5d5d75cc0b7a9e09a1121740cd00e3cf25fa362306a",
-    },
+    },*/
   },
   {
     id: "SINFUL_DICE",
     texture: "/resources/img/items/sinful_dice.png",
-    animation: {
+    /*animation: {
       0: "/head/6e22c298e7c6336af17909ac1f1ee6834b58b1a3cc99aba255ca7eaeb476173",
       500: "/head/71b7a73fc934c9de9160c0fd59df6e42efd5d0378e342b68612cfec3e894834a",
       1000: "/head/abe677a1e163a9f9e0afcfcde0c95365553478f99ab11152a4d97cf85dbe66f",
       1500: "/head/af2996efc2bb054f53fb0bd106ebae675936efe1fef441f653c2dce349738e",
       2000: "/head/e0d2a3ce4999fed330d3a5d0a9e218e37f4f57719808657396d832239e12",
       2500: "/head/41a2c088637fee9ae3a36dd496e876e657f509de55972dd17c18767eae1f3e9",
-    },
+    },*/
   },
   {
     id: "SNOW_SNOWGLOBE",
     texture: "/resources/img/items/snow_snowglobe.png",
-    animation: {
+    /*animation: {
       0: "/head/16d9b6791ffb7395fe5b44dd0b8f6b8d4c5bf3b90ddc92a10d3b8c83ec2efd20",
       60: "/head/13229f8525726684fb0227dad7621f05f0b8b5d58a8693fd0ea0688349f1d53c",
       310: "/head/962c440e980121d86cb46139fafda81e22f0ef0a2e176b9c483a73a6a6ad862c",
@@ -977,20 +977,20 @@ export const ITEM_ANIMATIONS = [
       1820: "/head/2ec0015699f67147fbb2c4f2c87fed245b6b9e7e00fc0b7d3b7a124b599be0fd",
       2060: "/head/5fc97d7cd008257df603b1431629ec9fd3847b03d7d26a7b4adb8f71b4e8408c",
       2310: "/head/2fed033e4baa8254af8f7c5e87b47638038cc7830e44823c97956687f7ad8e9",
-    },
+    },*/
   },
   {
     id: "REAPER_SPIRIT",
     texture: "/resources/img/items/reaper_spirit.png",
-    animation: {
+    /*animation: {
       day: "/head/724d2072918054a95a4f4bbc931bf3929d01cb012368bc4c78d0a3acc9cdbeea",
       night: "/head/c1d178e0da8a4ef28ade6b8f76b73611bf835e08fd8da9d0960d4b6dc18857f3",
-    },
+    },*/
   },
   {
     id: "SUPERIOR_SHIMMER",
     texture: "/resources/img/items/superior_shimmer.png",
-    animation: {
+    /*animation: {
       0: "/head/cb3deae44a93acf001ae6bef1e1f4d56e4b7eca4ba14699d071023a24eed2c2e",
       1390: "/head/4dfbe709ad0b540768a271138ed6e3a0026f063302678dc97c5f0855c0a8e5b",
       1540: "/head/1fbec3d1d98f24ea216507b0bdbd11363f0751c91ce7d533ba46f99819d32bbf",
@@ -1001,12 +1001,12 @@ export const ITEM_ANIMATIONS = [
       2290: "/head/15cec5963ad37f3427bb20391fe52af3a0fa91fba58cdee1f6a4c1819a25bfd2",
       2440: "/head/68dd1b3b61e4ef32d68c392ecc9cd3cdefd3c26e2ebcc5275813bf6864f9c413",
       2590: "/head/166e1e6249b4e41eb89dd895247cc7b4070352875cc45e5c13e16b42efa8084d",
-    },
+    },*/
   },
   {
     id: "UNSTABLE_SHIMMER",
     texture: "/resources/img/items/unstable_shimmer.png",
-    animation: {
+    /*animation: {
       0: "/head/17397c1603be4bcf52eae0d2ad66e1663aad724a8f069ba87aa41aa8d2b48820",
       660: "/head/91baf345a30ed4066c3acc8c115b743628bf0f9a745dc7a3c7b276edbf7cf98e",
       830: "/head/35ee2404c0fc6fdc101b0e76e8072da7fcb88fffabbbe4586df2c5037904f8",
@@ -1017,12 +1017,12 @@ export const ITEM_ANIMATIONS = [
       1560: "/head/1c3a818eafd47598c5b37155e74c794e04b993d7380ebc230fccc140107d5d0c",
       1720: "/head/6f05a4e9c5b56927273990149bfa656c3f5a3c83fa698acbd66ddfcf9d030727",
       1860: "/head/a75adcc4baa8cb3639c95dcb889d8f15aca72d3f999731a055accd7d9a5a8102",
-    },
+    },*/
   },
   {
     id: "YOUNG_SHIMMER",
     texture: "/resources/img/items/young_shimmer.png",
-    animation: {
+    /*animation: {
       0: "/head/e1ad5d83e55890290f52e4ad06e4351a2e87998d1cb3e76cc952a076deb7882b",
       1820: "/head/294d6721f2017255771e9de26ffe696175b336eff71c277fdc1210bb507fadd1",
       1930: "/head/a737e50acdeee12d13b927b4a40b89ce939e3c5ad3863ac6bb4d5c14592386e4",
@@ -1033,12 +1033,12 @@ export const ITEM_ANIMATIONS = [
       2730: "/head/5ce158fc4e502309a87bed14feb15a8f98f676fae7f3fa26e2a60e6bdd0a632e",
       2870: "/head/df365cd3a83fe8730256df57ed6902f91954ba8760a6bc7fb69672473bcfe85d",
       2990: "/head/422a3eabc82b5089bd2db80872de155f1d5203484b00a86227c81100b1e44fc1",
-    },
+    },*/
   },
   {
     id: "WISE_SHIMMER",
     texture: "/resources/img/items/wise_shimmer.png",
-    animation: {
+    /*animation: {
       0: "/head/25d7c5909f742e2e85ba7f2c7449f9e12a5c42c5a1132974df7f4ef204d6ca1e",
       1770: "/head/548115e4f39f8ba74ae4d0e136a6509e03fab0f4f5a4d106c9d9882b0cc95f8c",
       1920: "/head/28a26bfd54037051bd9b993d157771b21e8910108b22a6e0ee85a5f3591a76d2",
@@ -1049,12 +1049,12 @@ export const ITEM_ANIMATIONS = [
       2680: "/head/67d4d373b8949d1288156102473bc3f3fa07d04950a2a3d41fe7d1885fc08c22",
       2820: "/head/98d38b09739cb2c34c585d2559f0adb45dfbcdc24695b517a5469beee883ac34",
       2970: "/head/b45eea4959e43a89d844766be5031d2e6d99101715d7e23fcede2083675afb68",
-    },
+    },*/
   },
   {
     id: "STRONG_SHIMMER",
     texture: "/resources/img/items/strong_shimmer.png",
-    animation: {
+    /*animation: {
       0: "/head/ad3241f4419f06d17d88b21cc8e412f4ef11d7cfadd882e269da5a490e08f0e4",
       2000: "/head/427f5fdaff5e1e853e29bcdbd02dccc02529b7b6b8956c5a77e691edd8a14e32",
       2150: "/head/b6150c9ceecd48e5eeed2fc332af09e1013ce3281e46d25ce1418bf6e6ff8f77",
@@ -1065,12 +1065,12 @@ export const ITEM_ANIMATIONS = [
       2920: "/head/cb394649f001d418d341829bbb7282b5f19963bd5b78ec27bcb448c867f3ed82",
       3070: "/head/a8a6658e583e348e86e3a6560e95c01e97f2681ca1565b7614b3dabdf14d3638",
       3230: "/head/6a251637c534fcaa14fb9e9c6a06e01b70a44c9cd52b5216191189af45861388",
-    },
+    },*/
   },
   {
     id: "PROTECTOR_SHIMMER",
     texture: "/resources/img/items/protector_shimmer.png",
-    animation: {
+    /*animation: {
       0: "/head/72cd120841228d2812ca07433a3ec4640de81fa1f4bb9b42269c741403196fdb",
       2010: "/head/6c7eb2926df159c5e4220263b340348ce4a20f307759f35e416f275b577712af",
       2160: "/head/ce3259aeb7440e85d426470c4719e52322628621f9238f38065b81c9f01c46fc",
@@ -1081,12 +1081,12 @@ export const ITEM_ANIMATIONS = [
       2890: "/head/54f460eb414c810ff0ef821c838833862065e1ea1e23bddeae93f269fe3d2bca",
       3050: "/head/238955b9636407eb7fc812f4ef6b2f9339ffe50b1352f1987bc3e31ff494c4cc",
       3200: "/head/20c584baef019b24ab30dffd3ee13dbafaa97ea667af94b95ceb97f5d5ec190e",
-    },
+    },*/
   },
   {
     id: "OLD_SHIMMER",
     texture: "/resources/img/items/old_shimmer.png",
-    animation: {
+    /*animation: {
       0: "/head/78bf606f5ace4e3cfb81a14742992ff5a868d1f0f9d14b4bec9393859e0e0a00",
       2140: "/head/90cb01939b8a94572bff0d17dd827e18c399dedae63dca7bdc7b1cc066cbf49",
       2300: "/head/9f6589f30c89e363f50deb9bd1d07d0cb357d1a0a453f65df2c5ac9682ef8daf",
@@ -1096,12 +1096,12 @@ export const ITEM_ANIMATIONS = [
       2880: "/head/bf5ae5fddd30b8e0385f459b4a0117e19f7a0431748eaad7606ea4120fb533a7",
       3050: "/head/8d81fe4729d9e4bf6d6bb9680c3f6b4d3c0f939b0540b596aabafab261205737",
       3190: "/head/1b29950bb5a21cdcf4d25f54e43937858fe6be1b88d881bb4ac35fec880d6900",
-    },
+    },*/
   },
   {
     id: "HOLY_SHIMMER",
     texture: "/resources/img/items/holy_shimmer.png",
-    animation: {
+    /*animation: {
       0: "/head/c96696eb13cced8f5c521892d90fe8e2b129469520ade8d1d9f87225e7179761",
       2000: "/head/7aadd6f365cfed2d311ad3e3d237a53cbbbabe38436447c8cbe5f835d031c7a5",
       2150: "/head/53a005e06482753d599b292ab6a03ee935f620d081dfef6d987e43635934a42b",
@@ -1112,7 +1112,7 @@ export const ITEM_ANIMATIONS = [
       2900: "/head/c933a2a52fb0dd8429c3bb13336ae6e4ba2da28c594b3a3299527a2e1b158f97",
       3060: "/head/4e5ebceed5165cc33301e769e12603cd5de352e90c2c3ce2403c1e0fc889d123",
       3190: "/head/923fc9abad079f4382ecd48a7b7428c19082e0f5e2afb8d71c4599627dff25fd",
-    },
+    },*/
   },
   {
     id: "FAIRY_HELMET",
@@ -1137,7 +1137,7 @@ export const ITEM_ANIMATIONS = [
   {
     id: "PET_SKIN_BAT_VAMPIRE",
     texture: "/resources/img/items/pet_skin_bat_vampire.png",
-    animation: {
+    /*animation: {
       0: "/head/473af69ed9bf67e2f5403dd7d28bbe32034749bbfb635ac1789a412053cdcbf0",
       200: "/head/9fe39e362f74f05186818eb9f69fce89325c70f55d1b85214155fbc82bd67863",
       270: "/head/af254f20be3680f2b042a4289ae63089e08ae26e137f74dc5318cc57a67a42df",
@@ -1156,24 +1156,24 @@ export const ITEM_ANIMATIONS = [
       1680: "/head/a349d2ea1872ed47a387c89894e0265187a00219ee4da63b75b907016d3cd6aa",
       1790: "/head/af254f20be3680f2b042a4289ae63089e08ae26e137f74dc5318cc57a67a42df",
       1870: "/head/9fe39e362f74f05186818eb9f69fce89325c70f55d1b85214155fbc82bd67863",
-    },
+    },*/
   },
   {
     id: "PET_SKIN_BLAZE_FROZEN",
     texture: "/resources/img/items/pet_skin_blaze_frozen.png",
-    animation: {
+    /*animation: {
       0: "/head/47b78c3ff3e695dd5b2606fe266e19e628299815548dd2eb72ea864b7b8dfb18",
       230: "/head/6ba8927cac02e5e49142c141790ee695e7f5b2e3e44c528aa23db0c138b8996b",
       340: "/head/ad8dd3d82074f8ee731ed28b5cb4c53416ee9977ac965e53916070f0d07b3980",
       410: "/head/314d2152f639dff120b1246a67970f9e688606017e354db15638a900616ef795",
       510: "/head/486a3c5719d0b46d2f20d510d4acedefd994163c2800c702da01181e9c91c57e",
       640: "/head/4b0c880ffc254cb2fb44039125e49c67ff3116e5514bd8ffe42a24c98982bae8",
-    },
+    },*/
   },
   {
     id: "PET_SKIN_DOLPHIN_SNUBFIN",
     texture: "/resources/img/items/pet_skin_dolphin_snubfin.png",
-    animation: {
+    /*animation: {
       0: "/head/e7df31c808b3e0e8907943e4cadf37f6bfd0af177913ba81d96115c6139d98b9",
       90: "/head/60098af339abd2fdd2b0046c6a5ca5ae351e429d0198e9711da42f78780bb5db",
       220: "/head/39f759bda7792e9810c4524d6d3f4463cd306c32a61f27077b58396dea89d551",
@@ -1184,12 +1184,12 @@ export const ITEM_ANIMATIONS = [
       1000: "/head/81ecf02070175e5704d7d82e727f552796343bcb2e75855e78c58a6161223ca0",
       1280: "/head/cd5cad5afe1ba4b7a4e303dce968c97ae06988702ed5dbd553035d936abd5159",
       1420: "/head/279413c788c7f450234bdab0cf0d0291c57f730e380c6d4c7746fde15928381",
-    },
+    },*/
   },
   {
     id: "PET_SKIN_TIGER_GOLDEN",
     texture: "/resources/img/items/pet_skin_tiger_golden.png",
-    animation: {
+    /*animation: {
       0: "/head/c85f8db6e5b826d3dd5847cd8d7279f4d4dd50bc955ca7968c7c49b496ed7a3b",
       200: "/head/930b0cafdcfd0fbd86e9c44d405dea2f9910c79e4aa3c276d512eeb491a61cff",
       380: "/head/787e301cbe921605958c598223a226a029820759b3516a47f1d5000262f22c17",
@@ -1205,12 +1205,12 @@ export const ITEM_ANIMATIONS = [
       1850: "/head/d44e2408796c0e45c0abd5544b8bc1b9dcf7c53a75aba8a67b29bea09bf62bf0",
       2010: "/head/3e12619952e22eab5ab29417a0be1b9c14037804854c298357762279599a48a5",
       2200: "/head/577c388aa2a20441497af7f99b87f152e9a7618d1d9f9fb650d3b1c27f931054",
-    },
+    },*/
   },
   {
     id: "PET_SKIN_ARMADILLO_ENCHANTED",
     texture: "/resources/img/items/pet_skin_armadillo_enchanted.png",
-    animation: {
+    /*animation: {
       0: "/head/7426d7b174e8bd9c283f91a42cf2dfa95a518d5eae97ab5595412d4951d4db18",
       190: "/head/d3e9193ca1d2d35f3fed9b2ab2a2bca2cd250e5fd73af5caffb841762c31e8b3",
       290: "/head/177528ec673eb81526bc7d6ed1e9d030413a64fe4c14f6623f5ebd748cff4919",
@@ -1227,12 +1227,12 @@ export const ITEM_ANIMATIONS = [
       1700: "/head/55f35e3778156afac51cb8f2cd3c87f2feafb0ddc2dbdea72568433790b29522",
       1780: "/head/177528ec673eb81526bc7d6ed1e9d030413a64fe4c14f6623f5ebd748cff4919",
       1890: "/head/d3e9193ca1d2d35f3fed9b2ab2a2bca2cd250e5fd73af5caffb841762c31e8b3",
-    },
+    },*/
   },
   {
     id: "PET_SKIN_ARMADILLO_SEAFOAM",
     texture: "/resources/img/items/pet_skin_armadillo_seafoam.png",
-    animation: {
+    /*animation: {
       0: "/head/d0c72b0db2ecbdaf153c563593d17d546b302b278b1b81d3e063963b5b0e5bc4",
       200: "/head/9307cd9ec59e0de34cd85716d8fd4eb4ccd4ace33def1031968912a88b8caf11",
       300: "/head/9f80d8ddb7a689b28ccee283ede060aebea8787dd09220f0afa951b67e4b5e9c",
@@ -1249,20 +1249,20 @@ export const ITEM_ANIMATIONS = [
       1710: "/head/e479115288b3789ed316353878fba4d2c4164de6525d91d280d3e6714e6a5d8c",
       1840: "/head/9f80d8ddb7a689b28ccee283ede060aebea8787dd09220f0afa951b67e4b5e9c",
       1930: "/head/9307cd9ec59e0de34cd85716d8fd4eb4ccd4ace33def1031968912a88b8caf11",
-    },
+    },*/
   },
   {
     id: "PET_SKIN_KUUDRA_LOYALTY",
     texture: "/resources/img/items/pet_skin_kuudra_loyalty.png",
-    animation: {
+    /*animation: {
       faction_barbarian: "/head/bb7d06ab10c4d15433670ca59ed6ad87d797c24bf7bfc3343730aa1594a4970c",
       faction_mage: "/head/6fb7230da4e7a6cba268c4d87269ab66c9e41ae86eb426774d869c5f49fdb914",
-    },
+    },*/
   },
   {
     id: "TRUE_WARDEN",
     texture: "/resources/img/items/true_warden.png",
-    animation: {
+    /*animation: {
       0: "/head/a97e2b2a93d43ecfd6fce41c3bd506bf7087798fcf1b125cc7d141df23f3dc5b",
       290: "/head/557f03bf45409bdef5d0f50d97174e6d56650cf73f3de6acb2cb4ee5b9611bf6",
       430: "/head/e3c81310c69cce747c4c5b56a61b6c5631f196777773a44c5ae48e5ce4b3855a",
@@ -1283,7 +1283,7 @@ export const ITEM_ANIMATIONS = [
       2890: "/head/42070586ce0e6da4d924c8afffc6e2dbfdb71b2b7ca29e6d3b159c113abc2dd1",
       3040: "/head/e3c81310c69cce747c4c5b56a61b6c5631f196777773a44c5ae48e5ce4b3855a",
       3190: "/head/557f03bf45409bdef5d0f50d97174e6d56650cf73f3de6acb2cb4ee5b9611bf6",
-    },
+    },*/
   },
   // Crab Hats 2022 - Animated
   {
@@ -1505,7 +1505,7 @@ export const ITEM_ANIMATIONS = [
   {
     id: "PET_SKIN_BAL_INFERNO",
     texture: "/resources/img/items/pet_skin_bal_inferno.png",
-    animation: {
+    /*animation: {
       0: "/head/15ae6e347c2c828020b22f6faed62baf27548fad1656447af007b802d6f556e4",
       150: "/head/2f0ae52577d106c7179a902f3f3f183811994b9645debb83c8d61106c00193a0",
       280: "/head/9800062213c9e2a6660358794357187b6a5e36b3407b62d05524ce3748b722a9",
@@ -1521,12 +1521,12 @@ export const ITEM_ANIMATIONS = [
       1950: "/head/97fe96ddb4c1a56c6da1a4f851109d82d33dd50bcfcc20635a88008e0f246102",
       2080: "/head/cbf98cac365592d56ae74f3184d7600313ab05b4c8879806636504bc42425832",
       2260: "/head/e90b568791677a42e655f1ef895cde7870c3bae969fb280087f523f96b377b3b",
-    },
+    },*/
   },
   {
     id: "PET_SKIN_BEE_RGBEE",
     texture: "/resources/img/items/pet_skin_bee_rgbee.png",
-    animation: {
+    /*animation: {
       0: "/head/99c6da45da5a46614c05d5f8d7b3dfefb025e82ca4cdb4f0db64ced1315df659",
       90: "/head/76ef4ecf3205bdb0b71aee19aa0c8bb5d1ec961626920de8d86d7806e81270ab",
       190: "/head/3f05d1599b194d5e8f50b95330c93bca2a5a572deafb6feca138cc38347f5b55",
@@ -1560,12 +1560,12 @@ export const ITEM_ANIMATIONS = [
       3120: "/head/dda5d0affd4f8a2171004f9be2b365c62a7e868a2389bd8558b8e3128ea22495",
       3320: "/head/1fcdf78671a8fba5293318310bd471db122245cea64920447143cb70b40234bd",
       3430: "/head/dd4c96f5dc25fe4eb2c3fae53951c739a18f62d492a6ac6cf54619c8bbfda24f",
-    },
+    },*/
   },
   {
     id: "PET_SKIN_JELLYFISH_LUMINESCENT",
     texture: "/resources/img/items/pet_skin_jellyfish_luminescent.png",
-    animation: {
+    /*animation: {
       0: "/head/fb656bac64ada64fa221e9f48fbf8ab9334b7934efb979d758df4d0c1bd17695",
       370: "/head/261a49093574829a56f58a0e1dd90779ff18474dd92432a957713d6160ebe541",
       410: "/head/da65dbe64870cb7241576be5eb05ef21306bd32d56e33161cf88e6daebb10059",
@@ -1580,12 +1580,12 @@ export const ITEM_ANIMATIONS = [
       2110: "/head/2270c7ff355b7215b4f8016571ed9c364e55aea4deb8661103f762be7ab76cf3",
       2470: "/head/da65dbe64870cb7241576be5eb05ef21306bd32d56e33161cf88e6daebb10059",
       2610: "/head/261a49093574829a56f58a0e1dd90779ff18474dd92432a957713d6160ebe541",
-    },
+    },*/
   },
   {
     id: "PET_SKIN_GOLDEN_DRAGON_ANUBIS",
-    texture: "/resources/img/items/pet_skin_golden_dragon_anubis.png",
-    animation: {
+    texture: "https://wiki.hypixel.net/images/d/de/SkyBlock_items_pet_skin_golden_dragon_anubis.gif",
+    /*animation: {
       0: "/head/b44df25075a320c68df0e9bc76fd7f0db0be6f128e59d14f0591fed5cc6c396e",
       180: "/head/7a92ff0ae10a118daafcda0e471af2b064a79ac6991260930f9d5c98fe20ccf8",
       300: "/head/33ebc74633adc3c348efa62c312f537627f67de49de7d86b7c4407cc0cb39163",
@@ -1609,7 +1609,7 @@ export const ITEM_ANIMATIONS = [
       3150: "/head/49a3060a9fd920448adc18d20a20afbd2222f715c6a51c216c3267f42f5f909d",
       3310: "/head/584a8733631a9a3dc069380afccf240a99f3d3a891f39d011db54be3d9283d26",
       3450: "/head/f7c5d623e3ae65f4ee2819345ccbc226b638002a3a0048009242e0792c380635",
-    },
+    },*/
   },
 ];
 
