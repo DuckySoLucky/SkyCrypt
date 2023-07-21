@@ -946,23 +946,23 @@ const metaDescription = getMetaDescription()
       <div id="skill_levels_container">
         <% if (calculated.skyblock_level.xp !== 0 && calculated.skyblock_level.level !== 0) {%>
         <div class="skill-bars">
-          <skill-component skill="level" type="skyblock_level" icon="<%= skillItems.skyblock_level%>"></skill-component>
+          <skill-component skill="level" type="skyblock_level" icon="<%= calculated.icons.skyblock_level %>"></skill-component>
         </div>
         <% } %>
         <% if ('levels' in calculated) { %>
         <div class="skill-bars" data-api-enabled="<%= 'runecrafting' in calculated.levels %>">
-          <skill-component skill="taming" type="skill" icon="<%= skillItems.taming %>"></skill-component>
-          <skill-component skill="farming" type="skill" icon="<%= skillItems.farming %>"></skill-component>
-          <skill-component skill="mining" type="skill" icon="<%= skillItems.mining %>"></skill-component>
-          <skill-component skill="combat" type="skill" icon="<%= skillItems.combat %>"></skill-component>
-          <skill-component skill="foraging" type="skill" icon="<%= skillItems.foraging %>"></skill-component>
-          <skill-component skill="fishing" type="skill" icon="<%= skillItems.fishing %>"></skill-component>
-          <skill-component skill="enchanting" type="skill" icon="<%= skillItems.enchanting %>"></skill-component>
-          <skill-component skill="alchemy" type="skill" icon="<%= skillItems.alchemy %>"></skill-component>
-          <skill-component skill="carpentry" type="skill" icon="<%= skillItems.carpentry %>"></skill-component>
+          <skill-component skill="taming" type="skill" icon="<%= calculated.icons.taming %>"></skill-component>
+          <skill-component skill="farming" type="skill" icon="<%= calculated.icons.farming %>"></skill-component>
+          <skill-component skill="mining" type="skill" icon="<%= calculated.icons.mining %>"></skill-component>
+          <skill-component skill="combat" type="skill" icon="<%= calculated.icons.combat %>"></skill-component>
+          <skill-component skill="foraging" type="skill" icon="<%= calculated.icons.foraging %>"></skill-component>
+          <skill-component skill="fishing" type="skill" icon="<%= calculated.icons.fishing %>"></skill-component>
+          <skill-component skill="enchanting" type="skill" icon="<%= calculated.icons.enchanting %>"></skill-component>
+          <skill-component skill="alchemy" type="skill" icon="<%= calculated.icons.alchemy %>"></skill-component>
+          <skill-component skill="carpentry" type="skill" icon="<%= calculated.icons.carpentry %>"></skill-component>
           <% if ('runecrafting' in calculated.levels) { %>
-          <skill-component skill="runecrafting" type="skill" icon="<%= skillItems.runecrafting %>"></skill-component>
-          <skill-component skill="social" type="skill" icon="<%= skillItems.social %>"></skill-component>
+          <skill-component skill="runecrafting" type="skill" icon="<%= calculated.icons.runecrafting %>"></skill-component>
+          <skill-component skill="social" type="skill" icon="<%= calculated.icons.social %>"></skill-component>
           <% } else { %>
           <div class="no-access">Skills from achievements across profiles. <a target="_blank" class="enable-api" href="/resources/video/enable-api.mp4">Enable Skills API</a> for more accurate data.</div>
           <% } %>

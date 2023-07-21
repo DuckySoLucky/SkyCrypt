@@ -1582,7 +1582,7 @@ export async function getStats(
   profile,
   allProfiles,
   items,
-  options = { cacheOnly: false, debugId: `${helper.getClusterId()}/unknown@getStats` }
+  options = { cacheOnly: false, debugId: `${helper.getClusterId()}/unknown@getStats`, packs: null }
 ) {
   const output = {};
 
@@ -2502,6 +2502,10 @@ export async function getStats(
   for (const stat in output.pet_score_bonus) {
     output.stats[stat] += output.pet_score_bonus[stat];
   }
+
+  output.icons = await helper.getIcons(options.packs);
+
+  console.log(output.icons);
 
   console.debug(`${options.debugId}: getStats returned. (${Date.now() - timeStarted}ms)`);
   return output;

@@ -36,6 +36,7 @@ import {
 } from "./constants.js";
 
 import credentials from "./credentials.js";
+import { getTexture } from "./custom-resources.js";
 
 const hypixel = axios.create({
   baseURL: "https://api.hypixel.net/",
@@ -1103,4 +1104,82 @@ export function RGBtoHex(rgb) {
   const [r, g, b] = rgb.split(",").map((c) => parseInt(c.trim()));
 
   return [r, g, b].map((c) => c.toString(16).padStart(2, "0")).join("");
+}
+
+const skillItems = {
+  SKYCRYPT_SKYBLOCK_LEVEL: {
+    id: 397,
+    Damage: 3,
+    texture: "2e2cc42015e6678f8fd49ccc01fbf787f1ba2c32bcf559a015332fc5db50",
+  },
+  SKYCRYPT_MINING_SKILL: { id: 274 },
+  SKYCRYPT_RUNECRAFTING_SKILL: { id: 378 },
+  SKYCRYPT_SOCIAL_SKILL: { id: 388 },
+  SKYCRYPT_TAMING_SKILL: { id: 383 },
+  SKYCRYPT_ALCHEMY_SKILL: { id: 379 },
+  SKYCRYPT_CARPENTRY_SKILL: { id: 58 },
+  SKYCRYPT_COMBAT_SKILL: { id: 272 },
+  SKYCRYPT_ENCHANTING_SKILL: { id: 116 },
+  SKYCRYPT_FARMING_SKILL: { id: 294 },
+  SKYCRYPT_FISHING_SKILL: { id: 346 },
+  SKYCRYPT_FORAGING_SKILL: { id: 6, Damage: 3 },
+
+  // Dungeons
+  others: {
+    archer: {
+      id: 261,
+      Damage: 0,
+    },
+    berserk: {
+      id: 267,
+      Damage: 0,
+    },
+    catacombs: {
+      texture: "head-964e1c3e315c8d8fffc37985b6681c5bd16a6f97ffd07199e8a05efbef103793",
+    },
+    healer: {
+      id: 373,
+      Damage: 0,
+    },
+    mage: {
+      id: 369,
+      Damage: 0,
+    },
+    tank: {
+      id: 299,
+      Damage: 0,
+    },
+  },
+};
+
+async function getIcon(packs, icon) {
+  const itemData = skillItems[icon];
+  itemData.Damage ??= 0;
+
+  const item = generateItem({ ...skillItems[icon], tag: { ExtraAttributes: { id: icon } } });
+
+  const texture = await getTexture(item, { ignore_id: false, pack_ids: packs });
+
+  if (texture?.path) {
+    return texture.path.slice(14);
+  } else {
+    return itemData.texture ? `head-${itemData.texture}` : `icon-${itemData.id}_${itemData.Damage}`;
+  }
+}
+
+export async function getIcons(packs) {
+  return {
+    skyblock_level: await getIcon(packs, "SKYCRYPT_SKYBLOCK_LEVEL"),
+    taming: await getIcon(packs, "SKYCRYPT_TAMING_SKILL"),
+    farming: await getIcon(packs, "SKYCRYPT_FARMING_SKILL"),
+    mining: await getIcon(packs, "SKYCRYPT_MINING_SKILL"),
+    combat: await getIcon(packs, "SKYCRYPT_COMBAT_SKILL"),
+    foraging: await getIcon(packs, "SKYCRYPT_FORAGING_SKILL"),
+    fishing: await getIcon(packs, "SKYCRYPT_FISHING_SKILL"),
+    enchanting: await getIcon(packs, "SKYCRYPT_ENCHANTING_SKILL"),
+    alchemy: await getIcon(packs, "SKYCRYPT_ALCHEMY_SKILL"),
+    carpentry: await getIcon(packs, "SKYCRYPT_CARPENTRY_SKILL"),
+    runecrafting: await getIcon(packs, "SKYCRYPT_RUNECRAFTING_SKILL"),
+    social: await getIcon(packs, "SKYCRYPT_SOCIAL_SKILL"),
+  };
 }

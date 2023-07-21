@@ -49,12 +49,13 @@ export class SkillComponent extends LitElement {
             : undefined
         )}"
       >
-        ${this.icon.startsWith("head-")
-          ? html`<div
-              class="item-icon custom-icon"
-              style="background-image:url(/head/${this.icon.substring(5)})"
-            ></div>`
-          : html`<div class="item-icon ${this.icon}"></div>`}
+        ${
+          this.icon.startsWith("head-") ? 
+            html`<div class="item-icon custom-icon" style="background-image:url(/head/${this.icon.substring(5)})"></div>`
+          : this.icon.startsWith("icon-") ?
+            html`<div class="item-icon ${this.icon}"></div>`
+          : html`<div class="item-icon custom-icon" style="background-image: url('/resourcepacks/${this.icon}')"></div>`
+        }
         ${level.level == level.maxLevel ? html`<div class="piece-shine"></div>` : undefined}
       </div>
       <div class="skill-name">
