@@ -91,6 +91,15 @@ if (bowser.is("iOS")) {
 
   if (iOSVersionNumber < supportedIOSVersionNumber) {
     generatePopup("iOS");
+  } else {
+    for (const name in browsers) {
+      const checkTree: Bowser.Parser.checkTree = {};
+      checkTree[name] = "<" + browsers[name].version;
+
+      if (bowser.satisfies(checkTree)) {
+        generatePopup(name);
+      }
+    }
   }
 } else {
   for (const name in browsers) {
