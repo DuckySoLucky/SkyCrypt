@@ -85,6 +85,7 @@ interface DisplayItem {
   recombobulated: boolean | null;
   dungeon: boolean | null;
   shiny: boolean | null;
+  color: string | null;
 }
 
 interface ItemSlot {

@@ -258,17 +258,35 @@ function fillLore(element: HTMLElement) {
 
   const itemNameString = ((item as Item).tag?.display?.Name ?? item.display_name ?? "???") as string;
   const colorCode = itemNameString.match(/^§([0-9a-fklmnor])/i);
-  if (colorCode && colorCode[1]) {
+
+  if (item.color !== null && typeof item.color === "number") {
+    itemName.style.backgroundColor = `#${(item.color as string).toString().padStart(6, "0")}`;
+  } else if (colorCode && colorCode[1]) {
     itemName.style.backgroundColor = `var(--§${colorCode[1]})`;
   } else {
     itemName.style.backgroundColor = `var(--§${(RARITY_COLORS as RarityColors)[item.rarity || "common"]})`;
   }
 
   itemName.className = `item-name piece-${item.rarity || "common"}-bg nice-colors-dark`;
-  const itemNameHtml = renderLore((item as Item).tag?.display?.Name ?? item.display_name ?? "???");
+  let itemNameHtml = renderLore(itemNameString);
+
   const isMulticolor = (itemNameHtml.match(/<\/span>/g) || []).length > 1;
+
   itemNameContent.dataset.multicolor = String(isMulticolor);
-  itemNameContent.innerHTML = isMulticolor ? itemNameHtml : itemNameString.replace(/§([0-9a-fklmnor])/gi, "") ?? "???";
+
+  const useNoColor = isMulticolor;
+  console.log(useNoColor, colorCode[1], colorCode && itemNameString.charAt(1) === colorCode[1]);
+  console.log(itemNameString);
+
+  // remove first 2 characters
+  if (itemNameString.slice(2, 3) === "✿") {
+    console.log(itemNameString, "is dyed");
+  } else if (colorCode && itemNameString.charAt(1) === colorCode[1]) {
+    console.log(itemNameString, "uses the same rarity color as background");
+    itemNameHtml = renderLore(itemNameString.replaceAll(`§${colorCode[1]}`, ""));
+  }
+
+  itemNameContent.innerHTML = useNoColor ? itemNameHtml : itemNameString.replace(/§([0-9a-fklmnor])/gi, "") ?? "???";
 
   if (element.hasAttribute("data-pet-index")) {
     itemNameContent.dataset.multicolor = "false";
