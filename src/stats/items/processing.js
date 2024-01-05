@@ -48,6 +48,7 @@ async function getBackpackContents(arraybuf) {
 
 // Process items returned by API
 export async function processItems(base64, source, customTextures = false, packs, cacheOnly = false) {
+  const timeNow = Date.now();
   // API stores data as base64 encoded gzipped Minecraft NBT data
   const buf = Buffer.from(base64, "base64");
 
@@ -280,6 +281,7 @@ export async function processItems(base64, source, customTextures = false, packs
     }
 
     if (item.tag?.ExtraAttributes?.skin == undefined && customTextures) {
+      const timeSmth = Date.now();
       const customTexture = await getTexture(item, {
         ignore_id: false,
         pack_ids: packs,
@@ -291,6 +293,10 @@ export async function processItems(base64, source, customTextures = false, packs
         item.texture_pack = customTexture.pack.config;
         item.texture_pack.base_path =
           "/" + path.relative(path.resolve(__dirname, "..", "public"), customTexture.pack.base_path);
+      }
+
+      if (source === "accessory bag" && helper.getId(item)) {
+        // console.log(`Processed ${helper.getId(item)} in ${Date.now() - timeSmth}ms`);
       }
     }
 
@@ -541,6 +547,13 @@ export async function processItems(base64, source, customTextures = false, packs
   }
 
   items = items.filter((a) => !a.inBackpack);
+
+  if (source === "accessory bag") {
+    // console.log(`Processed ${items.length} in ${Date.now() - timeNow}ms`);
+    for (const item of items) {
+      // if (helper.getId(item)) console.log(helper.getId(item));
+    }
+  }
 
   return items;
 }

@@ -591,6 +591,15 @@ export async function getTexture(item, { ignore_id = false, pack_ids = [], debug
       break;
     }
 
+    if (!("path" in outputTexture)) {
+      return null;
+    }
+
+    // console.log(`Skipped cache for ${getId(item)}`);
+    outputTexture.path = path.posix.relative(path.resolve(FOLDER_PATH, "..", "public"), outputTexture.path);
+
+    return outputTexture ?? null;
+
     for (const texture of pack.textures) {
       if (!ignore_id && texture.id != item.id) {
         continue;
