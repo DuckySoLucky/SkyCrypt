@@ -71,6 +71,9 @@ dependencies:
   micromatch:
     specifier: ^4.0.5
     version: 4.0.5
+  minecraft-assets:
+    specifier: ^1.12.2
+    version: 1.12.2
   minecraft-data:
     specifier: ^3.59.3
     version: 3.60.0
@@ -3145,6 +3148,10 @@ packages:
   /mimic-response@2.1.0:
     resolution: {integrity: sha512-wXqjST+SLt7R009ySCglWBCFpjUygmCIfD790/kVbiGmUgfYGuB14PiTd5DwVxSV4NcYHjzMkoj5LjQZwTQLEA==}
     engines: {node: '>=8'}
+    dev: false
+
+  /minecraft-assets@1.12.2:
+    resolution: {integrity: sha512-/eMxh3LNjCXOnU6KnQMjBM8dRnoJNpWIg7mD2m2RthraYiQK2FNzPWIKxWm2j3Ufcf5nzFXupgABledE86r4fQ==}
     dev: false
 
   /minecraft-data@3.60.0:

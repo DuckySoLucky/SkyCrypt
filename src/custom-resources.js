@@ -27,6 +27,10 @@ import child_process from "child_process";
 import { getFileHash } from "./hashes.js";
 const execFile = util.promisify(child_process.execFile);
 
+import minecraftAssets from "minecraft-assets";
+const assets = minecraftAssets("1.8.8");
+const textureImage = assets.textureContent;
+
 const NORMALIZED_SIZE = 128;
 const RESOURCE_CACHING = process.env.NODE_ENV == "development" ? true : false;
 
@@ -340,6 +344,7 @@ async function loadResourcePacks() {
           if (item) {
             texture.id = item.id;
             texture.damage = item.damage ?? 0;
+            texture.mcDataName = properties[property].trim();
           }
         }
 
@@ -674,7 +679,7 @@ function processTextures(outputTexture, textures, pack, item) {
  * @param {boolean} [options.debug]
  * @returns {object} Item's texture
  */
-export function getTexture(item, { ignore_id = false, pack_ids = [], debug = false, hotm = false } = {}) {
+export function getTexture(item, { ignore_id = false, pack_ids = [], debug = false, hotm = false, log = false } = {}) {
   const ifExists =
     skyblockIDListMap.has(getId(item)) === true ||
     textureValueListMap.has(getTextureValue(item)) === true ||
@@ -709,22 +714,43 @@ export function getTexture(item, { ignore_id = false, pack_ids = [], debug = fal
     const cachedItemIdTexture = skyblockIDTextureMap.get(`${pack.config.id}:${getId(item)}`);
     if (cachedItemIdTexture) {
       outputTexture = processTextures(outputTexture, cachedItemIdTexture, pack, item);
+      break;
     }
 
     const cachedTextureValueTexture = textureValueTextureMap.get(`${pack.config.id}:${getTextureValue(item)}`);
     if (cachedTextureValueTexture) {
       outputTexture = processTextures(outputTexture, cachedTextureValueTexture, pack, item);
+      break;
     }
 
     const cachedHeadTexture = headTextureMap.get(`${pack.config.id}:${item.id}:${item.Damage ?? 0}`);
     if (cachedHeadTexture) {
       outputTexture = processTextures(outputTexture, cachedHeadTexture, pack, item);
+      break;
     }
 
     const cachedItemIdTextureMap = itemIdTextureMap.get(`${pack.config.id}:${item.id}:${item.Damage ?? 0}`);
     if (cachedItemIdTextureMap) {
       outputTexture = processTextures(outputTexture, cachedItemIdTextureMap, pack, item);
+      break;
     }
+  }
+
+  if (getId(item) === "ASPECT_OF_THE_END") {
+    //  console.log("outputTexture", outputTexture);
+
+    const itemId = item.id;
+    const mcDataItem = mcData.items[itemId];
+    const base64Texture = textureImage[mcDataItem.name].texture;
+
+    const base64Data = base64Texture.split(",")[1];
+    const buffer = Buffer.from(base64Data, "base64");
+
+    const sharpImage = sharp(buffer);
+
+    const metadata = sharpImage.metadata();
+
+    // console.log("metadata", metadata);
   }
 
   if (!("path" in outputTexture)) {

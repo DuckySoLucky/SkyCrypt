@@ -4,8 +4,6 @@
       item-icon
       <% if (isEnchanted(item)) { %> is-enchanted <% } %>
       <% if (item.texture_path) { %> custom-icon <% } %>
-      <% if (item.Damage != 0) { %> icon-<%= item.id %>_0 <% } %>
-      icon-<%= item.id %>_<%= item.Damage %>
     ">
   </div>
 <% } %>

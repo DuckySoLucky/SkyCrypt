@@ -284,7 +284,12 @@ export async function processItems(base64, source, customTextures = false, packs
         ignore_id: false,
         pack_ids: packs,
         hotm: source === "storage_icons",
+        log: helper.getId(item) === "ASPECT_OF_THE_END",
       });
+
+      if (source === "inventory" && helper.getId(item) === "ASPECT_OF_THE_END") {
+        // console.log(item, customTexture);
+      }
 
       if (customTexture) {
         item.animated = customTexture.animated;
@@ -292,6 +297,14 @@ export async function processItems(base64, source, customTextures = false, packs
         item.texture_pack = customTexture.pack.config;
         item.texture_pack.base_path =
           "/" + path.relative(path.resolve(__dirname, "..", "public"), customTexture.pack.base_path);
+      } else {
+        const itemId = item.id;
+        if (itemId && itemId !== 397) {
+          const mcDataItem = mcData.items[itemId];
+          console.log(mcDataItem.name);
+
+          item.texture_path = `/item/${mcDataItem.name}`;
+        }
       }
     }
 

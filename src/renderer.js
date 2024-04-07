@@ -21,6 +21,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const skew_a = 26 / 45;
 const skew_b = skew_a * 2;
 
+import minecraftData from "minecraft-data";
+const mcData = minecraftData("1.8.9");
+
+import minecraftAssets from "minecraft-assets";
+const assets = minecraftAssets("1.8.8");
+const textureImage = assets.textureContent;
+
 /**
  * Check if a canvas image has transparency
  * @param {HTMLCanvasElement} canvas - The canvas to check for transparency
@@ -465,14 +472,12 @@ export async function renderItem(skyblockId, query) {
   const item = await getItemData({ skyblockId, ...itemQuery });
   const outputTexture = { mime: "image/png" };
 
-  for (const rule of itemsCss.stylesheet.rules) {
-    if (!rule.selectors?.includes(`.icon-${item.id}_${item.Damage}`)) {
-      continue;
-    }
+  const itemId = item.id === -1 ? skyblockId : mcData.items[item.id]?.name ?? item.id;
 
-    const coords = rule.declarations[0].value.split(" ").map((a) => Math.abs(parseInt(a)));
-
-    outputTexture.image = getPart(itemsSheet, ...coords, 128, 128, 1).toBuffer("image/png");
+  console.log(item, itemId);
+  const base64Texture = textureImage[itemId].texture;
+  if (base64Texture) {
+    outputTexture.image = Buffer.from(base64Texture.split(",")[1], "base64");
   }
 
   if ("texture" in item) {
